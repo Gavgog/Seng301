@@ -1,4 +1,5 @@
 package steps;
+
 import java.SQLiteJDBC;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -10,7 +11,6 @@ import org.sqlite.SQLiteJDBCLoader;
 import java.sql.*;
 
 public class VehicleTestSteps {
-    SQLiteJDBC sqldb = new SQLiteJDBC();
 
     @Given ("^I am connected to the WOF database$")
     public void i_am_connected_to_the_WOF_database () throws SQLException {
@@ -40,6 +40,7 @@ public class VehicleTestSteps {
 
     @When("^I Create a new vehicle with vinNum \"([^\"]*)\"$")
     public void iCreateANewVehicleWithVinNum(String arg1) throws Throwable {
+        SQLiteJDBC sqllitejdbc = new SQLiteJDBC();
         throw new PendingException();
     }
 
